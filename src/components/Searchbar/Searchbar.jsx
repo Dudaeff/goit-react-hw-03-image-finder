@@ -6,12 +6,11 @@ const Searchbar = ({ onSubmit }) => {
     return (
         <Header>
             <SearchForm onSubmit={onSubmit}>
-                <SearchFormButton type="submit" className="SearchForm-button">
+                <SearchFormButton type="submit">
                     Search
                 </SearchFormButton>
 
                 <SearchFormInput
-                    className="SearchForm-input"
                     type="text"
                     autoComplete="off"
                     autoFocus

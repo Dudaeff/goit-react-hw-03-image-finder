@@ -1,5 +1,7 @@
+import { Wrapper } from "./Layout.styled";
+
 const Layout = ({ children }) => {
-    return <div>{children}</div>
+    return <Wrapper>{children}</Wrapper>
 };
 
 export { Layout };

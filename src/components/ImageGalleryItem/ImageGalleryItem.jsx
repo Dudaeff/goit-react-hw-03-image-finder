@@ -18,8 +18,8 @@ class ImageGalleryItem extends Component {
         const { showModal } = this.state;
 
         return (
-            <GalleryItem className="ImageGalleryItem">
-                <GalleryItemImage src={webformatURL} alt={tags} onClick={this.handleImageClick} className="ImageGalleryItem-image" />
+            <GalleryItem>
+                <GalleryItemImage src={webformatURL} alt={tags} onClick={this.handleImageClick}/>
       
                 {showModal &&
                 <Modal onClose={this.toggleModal}>
