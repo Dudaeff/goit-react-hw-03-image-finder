@@ -5,6 +5,7 @@ import { ImageGalleryItem } from "components/ImageGalleryItem/ImageGalleryItem";
 import { Button } from "components/Button/Button";
 import { getImagesByQuery } from "services/imagesApi";
 import { Vortex } from "react-loader-spinner";
+import { ImageGalleryList } from "components/ImageGallery/ImageGallery.styled";
 
 class ImageGallery extends Component {
     state = {
@@ -44,11 +45,11 @@ class ImageGallery extends Component {
 
         if (images.length > 0) return (
             <>
-                <ul className="ImageGallery">
+                <ImageGalleryList>
                     {images.map(({ id, webformatURL, largeImageURL, tags }) => (
                         <ImageGalleryItem key={id} webformatURL={webformatURL} largeImageURL={largeImageURL} tags={tags} />
                         ))}
-                </ul>
+                </ImageGalleryList>
 
                 { status === 'pending' && <Vortex
                 visible={true}
